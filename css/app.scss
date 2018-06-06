@@ -1,0 +1,236 @@
+// variables
+$red: #FF6F6F;
+$black: #101010;
+$graphik: 'Graphik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$mono: 'SF Mono', monospace;
+
+// media queries
+
+@mixin small {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin inbetween {
+  @media (max-width: 874px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+
+// fonts
+
+@font-face {
+	font-family: 'Graphiik';
+	src: url('../assets/fonts/Graphik-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Graphiik';
+	src: url('../assets/fonts/Graphik-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Graphiik';
+	src: url('../assets/fonts/Graphik-Semibold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Graphiik';
+	src: url('../assets/fonts/Graphik-Bold.otf') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 400;
+  src: url("https://sf.abarba.me/SFMono-Regular.otf");
+}
+
+// styles
+
+body {
+  background-color: black;
+  font-family: $graphik;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+	font-weight: 600;
+	font-size: 126px;
+	color: white;
+	line-height: 0.9;
+  margin: 0;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 96px;
+  text-align: center;
+  letter-spacing: -1px;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+p {
+  font-weight: 500;
+  letter-spacing: -0.3;
+  font-size: 26px;
+  text-align: center;
+  line-height: 40px;
+  max-width: 800px;
+}
+
+.mono {
+  font-family: $mono;
+  color: #5F5F5F;
+  font-size: 14px;
+}
+
+.tiny-heading {
+  font-weight: 400;
+  color: #A4A4A4;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 40px;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  padding: 0;
+  font-weight: 600;
+  font-size: 96px;
+  margin-bottom: 10px;
+}
+
+video {
+  border: 1px solid white;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+section.longer {
+  min-height: 140vh;
+}
+
+section.white {
+  background-color: white;
+  p {
+    color: black;
+  }
+}
+
+section.green {
+  background-color: #00E9A2;
+}
+
+
+.r-b {
+  position: absolute;
+  bottom: 50px;
+}
+
+.r-t {
+  position: absolute;
+  top: 50px;
+}
+
+.p-t {
+  padding-top: 100px;
+}
+
+.quote {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    font-size: 36px;
+    line-height: 55px;
+  }
+}
+
+.rule {
+  p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 34px;
+  }
+}
+
+.caption {
+  font-family: $mono;
+  font-size: 14px;
+  color: #B5B5B5;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#interface {
+  max-width: 1200px;
+  border: 1px solid #333333;
+}
+
+#ad,
+#iphone {
+  max-width: 1200px;
+}
+
+
+
+.fadein {
+  opacity: 0;
+  transition: all 3.5s;
+  transform: translate(0, 200px);
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
