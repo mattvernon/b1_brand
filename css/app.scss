@@ -214,6 +214,10 @@ section.green {
   }
 }
 
+.image {
+  padding-bottom: 100px;
+}
+
 .caption {
   font-family: $mono;
   font-size: 14px;
@@ -227,9 +231,10 @@ section.green {
 #interface {
   max-width: 1200px;
   border: 1px solid #333333;
+  margin-top: 100px;
 }
 
-#ad,
+#subway,
 #iphone {
   max-width: 1200px;
 }
