@@ -41,7 +41,7 @@ body {
   background-color: white;
   border-top: 1px solid #C6C6C6;
   border-right: 1px solid #C6C6C6;
-  height: 5px;
+  height: 2px;
   z-index: 5; }
 
 h1 {
@@ -134,7 +134,8 @@ section.green {
   text-align: center; }
   .quote p {
     font-size: 36px;
-    line-height: 55px; }
+    line-height: 55px;
+    max-width: 1000px; }
 
 .rule p {
   max-width: 600px;
